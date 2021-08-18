@@ -69,10 +69,12 @@ function processRequest(req, res) {
     if (result && result.length == 2 && result[1]) {
         var remoteURL;
 
-        try {            
+        try {     
+            console.log("00000000000",remoteURL)
             result[1] = result[1].replace(/:\//g,"://");
+            console.log("-------------",remoteURL)
             remoteURL = url.parse(decodeURI(result[1]));
-            console.log(remoteURL)
+            console.log("===========",remoteURL)
         }
         catch (e) {
             return sendInvalidURLResponse(res);
