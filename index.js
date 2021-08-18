@@ -69,10 +69,7 @@ function processRequest(req, res) {
     if (result && result.length == 2 && result[1]) {
         var remoteURL;
 
-        try {
-            
-            console.log(req.url);
-            
+        try {            
             remoteURL = url.parse(decodeURI(result[1]));
         }
         catch (e) {
@@ -173,7 +170,6 @@ if (cluster.isMaster) {
 else
 {
     http.createServer(function (req, res) {
-        req.url = req.url.replace(/:\//g,"://");
         // Process AWS health checks
         if (req.url === "/health") {
             return writeResponse(res, 200);
