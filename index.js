@@ -70,8 +70,8 @@ function processRequest(req, res) {
         var remoteURL;
 
         try {
-            if(result[1].includes(":/")) result[1] = result[1].replace(/:\//g,"://");
-            console.log(result[1]);
+            console.log(req.url);
+
             remoteURL = url.parse(decodeURI(result[1]));
         }
         catch (e) {
