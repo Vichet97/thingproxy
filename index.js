@@ -70,7 +70,7 @@ function processRequest(req, res) {
         var remoteURL;
 
         try {
-            console.log("====",result[1]);
+            console.log("====",result[1], req.url);
             remoteURL = url.parse(decodeURI(result[1]));
         }
         catch (e) {
