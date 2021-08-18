@@ -72,9 +72,8 @@ function processRequest(req, res) {
         try {     
             console.log("00000000000",remoteURL)
             result[1] = result[1].replace(/:\//g,"://");
-            console.log("-------------",remoteURL)
+            console.log("-------------",result[1])
             remoteURL = url.parse(decodeURI(result[1]));
-            remoteURL.protocol = "https";
             console.log("===========",remoteURL)
         }
         catch (e) {
@@ -116,7 +115,7 @@ function processRequest(req, res) {
         // delete req.headers["referer"];
 
         var proxyRequest = request({
-            url: remoteURL,
+            url: result[1],
             headers: req.headers,
             method: req.method,
             timeout: config.proxy_request_timeout_ms,
