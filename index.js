@@ -70,7 +70,6 @@ function processRequest(req, res) {
         var remoteURL;
 
         try {
-            req.url = req.url.replace(/:\//g,"://");
             
             console.log(req.url);
             
@@ -174,7 +173,7 @@ if (cluster.isMaster) {
 else
 {
     http.createServer(function (req, res) {
-
+        req.url = req.url.replace(/:\//g,"://");
         // Process AWS health checks
         if (req.url === "/health") {
             return writeResponse(res, 200);
