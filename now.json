@@ -1,0 +1,33 @@
+{
+
+   "version":2,
+
+   "regions": ["icn1"],
+
+   "public": false,
+
+   "builds":[
+
+      {
+
+         "src":"index.js",
+
+         "use":"@now/node-server"
+
+      }
+
+   ],
+
+   "routes":[
+
+      {
+
+         "src":"/(.*)",
+
+         "dest":"/index.js"
+
+      }
+
+   ]
+
+}
