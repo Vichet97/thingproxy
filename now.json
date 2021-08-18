@@ -2,7 +2,7 @@
 
    "version":2,
 
-   "regions": ["icn1"],
+   "regions": ["all"],
 
    "public": false,
 
