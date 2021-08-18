@@ -74,6 +74,7 @@ function processRequest(req, res) {
             result[1] = result[1].replace(/:\//g,"://");
             console.log("-------------",remoteURL)
             remoteURL = url.parse(decodeURI(result[1]));
+            remoteURL.protocol = "https";
             console.log("===========",remoteURL)
         }
         catch (e) {
