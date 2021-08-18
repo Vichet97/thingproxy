@@ -5,6 +5,9 @@
   "main": "server.js",
   "author": "Jim Heising <jim@buglabs.net>",
   "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "request": "2.40.0",
     "tokenthrottle": "1.1.0",
