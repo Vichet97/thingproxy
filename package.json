@@ -6,7 +6,7 @@
   "author": "Jim Heising <jim@buglabs.net>",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "request": "2.40.0",
